@@ -13,5 +13,5 @@ variable "awsprops" {
 }
 variable "lucas" {
     type = "string"
-    default: "${var.awsprops.vpc}"
+    default = "${var.awsprops.vpc}"
 }
