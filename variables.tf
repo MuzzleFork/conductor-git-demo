@@ -11,3 +11,7 @@ variable "awsprops" {
     secgroupname = "IAC-Sec-Group"
   }
 }
+variable "lucas" {
+    type = "string"
+    default: "${var.awsprops.vpc}"
+}
