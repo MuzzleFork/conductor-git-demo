@@ -1,17 +1,31 @@
-variable "awsprops" {
-    type = "map"
-    default = {
-    region = "us-east-1"
-    vpc = "vpc-5234832d"
-    ami = "ami-0c1bea58988a989155"
-    itype = "t2.micro"
-    subnet = "subnet-81896c8e"
-    publicip = true
-    keyname = "myseckey"
-    secgroupname = "IAC-Sec-Group"
+"variable" = {
+  "awsprops" = {
+    "default" = {
+      "ami" = "ami-0c1bea58988a989155"
+
+      "itype" = "01GSPPEJHZNKRJBYN1Q06EAV8X"
+
+      "keyname" = "myseckey"
+
+      "publicip" = true
+
+      "region" = "us-east-1"
+
+      "secgroupname" = "IAC-Sec-Group"
+
+      "subnet" = "subnet-81896c8e"
+
+      "vpc" = "vpc-5234832d"
+    }
+
+    "type" = "map"
   }
 }
-variable "lucas" {
-    type = "string"
-    default = "${var.awsprops.vpc}"
+
+"variable" = {
+  "lucas" = {
+    "default" = "${var.awsprops.vpc}"
+
+    "type" = "string"
+  }
 }
